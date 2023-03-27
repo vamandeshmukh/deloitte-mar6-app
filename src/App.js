@@ -1,5 +1,5 @@
 // types of cpmponents in React - 
-// calss component 
+// function component 
 // class componment 
 
 
