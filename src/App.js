@@ -2,38 +2,43 @@
 // function component 
 // class componment 
 
+// jsx 
+
+
 
 // function component 
-// const App = () => {
+const App = () => {
 
-//   return (
-//     <div>
-//       <h1>Deloitte React App</h1>
-//       <p>Welcome to Deloitte ReactJS Application.</p>
-//     </div>
-//   );
+  const num = 10;
 
-// }
+  return (
+    <div>
+      <h1>Deloitte React App</h1>
+      <p>Welcome to Deloitte ReactJS Application.</p>
+    </div>
+  );
 
-// export default App;
-
-// class component
-import React from "react";
-
-class App extends React.Component {
-
-  render = () => {
-    return (
-      <duv>
-        <h1>Deloitte React App</h1>
-        <p>Deloitte ReactJS Class component.</p>
-      </duv>
-    );
-  };
-
-};
+}
 
 export default App;
+
+// class component
+// import React from "react";
+
+// class App extends React.Component {
+
+//   render = () => {
+//     return (
+//       <duv>
+//         <h1>Deloitte React App</h1>
+//         <p>Deloitte ReactJS Class component.</p>
+//       </duv>
+//     );
+//   };
+
+// };
+
+// export default App;
 
 // const App = () => {
 
