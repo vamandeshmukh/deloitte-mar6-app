@@ -6,6 +6,7 @@
 
 // function component 
 import Header from "./components/Header";
+import BlogPosts from "./components/BlogPosts";
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
       <h1>Deloitte React App</h1>
       <p>Welcome to Deloitte ReactJS Application.</p>
       <p>{salary}</p>
+      <BlogPosts />
     </div>
   );
 
