@@ -9,12 +9,15 @@
 // function component 
 const App = () => {
 
-  const num = 10;
+  const salary = 100;
 
   return (
     <div>
       <h1>Deloitte React App</h1>
       <p>Welcome to Deloitte ReactJS Application.</p>
+      <p>{salary}</p>
+      <p>{10 + 10}</p>
+      <p>{salary * 2}</p>
     </div>
   );
 
