@@ -1,3 +1,14 @@
+// React app - 
+// - components 
+// - state 
+// - props 
+// - JSX 
+
+// routing 
+// data binding 
+// redux 
+
+
 // import from a library 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
