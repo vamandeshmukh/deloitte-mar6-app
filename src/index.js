@@ -1,8 +1,14 @@
+// import from a library 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// import CSS 
 import './index.css';
+
+// import JS 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('abc'));
 

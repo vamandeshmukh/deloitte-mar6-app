@@ -1,16 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+const App = () => {
   return (
     <div>
       <h1>Deloitte React App</h1>
-      <p>Welcome to Deloitte ReactJS Applicatoin.</p>
+      <p>Welcome to Deloitte ReactJS Application.</p>
     </div>
   );
+
 }
 
 export default App;
+
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Deloitte React App</h1>
+//       <p>Welcome to Deloitte ReactJS Application.</p>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+// import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>Deloitte React App</h1>
+//       <p>Welcome to Deloitte ReactJS Application.</p>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
 
