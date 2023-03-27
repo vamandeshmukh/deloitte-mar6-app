@@ -21,7 +21,6 @@ const App = () => {
       <BlogPosts />
     </div>
   );
-
 }
 
 export default App;
