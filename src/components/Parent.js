@@ -7,11 +7,9 @@ const Parent = () => {
     const [childDataInParent, setChildDataInParent] = useState('');
 
     const getDataFromChild = (arg) => {
-        console.log(arg);
         console.log('getDataFromChild');
         setChildDataInParent(arg);
     };
-
 
     return (
         <div>
