@@ -9,22 +9,23 @@ const BlogPosts = () => {
 
     const handleChange = (evt) => {
         console.log(evt.target.value);
-        // authorName = evt.target.value; // not working
+        console.log(evt.target.name);
         setAuthorName(evt.target.value);
+    };
+
+    const handleSubmit = () => {
+        console.log('called');
     };
 
     return (
         <div>
             <p>Author : {authorName}</p>
-            <form>
+            <form onSubmit={handleSubmit} >
                 <input type='text' value={authorName} onChange={handleChange} />
+                <input type='submit' value='Click to Submit' />
             </form>
         </div>
     );
 };
 
 export default BlogPosts;
-
-
-
-
