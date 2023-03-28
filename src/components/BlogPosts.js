@@ -16,7 +16,6 @@ const BlogPosts = () => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault(); // IMP
-        console.log('called');
         setAuthorNameSubmitted(authorName);
         setAuthorName('');
     };
