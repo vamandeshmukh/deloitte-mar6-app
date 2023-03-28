@@ -1,17 +1,24 @@
+import { useState } from "react";
 import Child from "./Child";
 
 const Parent = () => {
 
     const parentDataInParent = 'Sonu';
-    let childDataInparent = '';
+    const [childDataInParent, setChildDataInParent] = useState('');
+
+    const getDataFromChild = (arg) => {
+        console.log(arg);
+        console.log('getDataFromChild');
+        setChildDataInParent(arg);
+    };
+
 
     return (
         <div>
             <p>Parent -</p>
             <p>Parent data in parent: {parentDataInParent}</p>
-            <p>Child data in parent: {childDataInparent}</p>
-
-            <Child passData={parentDataInParent} />
+            <p>Child data in parent: {childDataInParent}</p>
+            <Child passData={parentDataInParent} passFun={getDataFromChild} />
         </div>
     );
 };
