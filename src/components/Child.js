@@ -15,7 +15,7 @@ const Child = (props) => {
             <p>Child -</p>
             <p>Parent data in child: {parentDataInChild}</p>
             <p>Child data in child: {childDataInChild}</p>
-            <button onClick={passDataToParent}>Click to Pass</button>
+            <button onClick={passDataToParent}>Click</button>
         </div>
     );
 
