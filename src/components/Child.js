@@ -1,6 +1,4 @@
 
-
-
 const Child = (props) => {
 
     const parentDataInChild = props.passData;

@@ -1,7 +1,5 @@
 import Child from "./Child";
 
-
-
 const Parent = () => {
 
     const parentDataInParent = 'Sonu';
@@ -13,7 +11,6 @@ const Parent = () => {
             <Child passData={parentDataInParent} />
         </div>
     );
-
 };
 
 export default Parent;
