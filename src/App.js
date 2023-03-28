@@ -7,6 +7,7 @@
 // function component 
 import Header from "./components/Header";
 import BlogPosts from "./components/BlogPosts";
+import Login from "./components/Login";
 
 const App = () => {
 
@@ -16,7 +17,8 @@ const App = () => {
     <div>
       {/* <Header /> */}
       <h1>Deloitte React App</h1>
-      <BlogPosts />
+      <Login />
+      {/* <BlogPosts /> */}
     </div>
   );
 }

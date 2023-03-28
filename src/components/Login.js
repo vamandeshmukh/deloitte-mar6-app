@@ -9,6 +9,7 @@ const Login = () => {
     };
 
     const submitLogin = (e) => {
+        // sonu sonu
 
     };
 
@@ -17,8 +18,8 @@ const Login = () => {
             <p>Login Component</p>
             <div>
                 <form onSubmit={submitLogin}>
-                    <input type='text' value='username' onChange={handleLogin} />
-                    <input type='password' value='password' onChange={handleLogin} />
+                    <input type='text' name='username' onChange={handleLogin} />
+                    <input type='password' name='password' onChange={handleLogin} />
                     <input type='submit' value='Login' onChange={handleLogin} />
                 </form>
 
