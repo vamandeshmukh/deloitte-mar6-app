@@ -9,7 +9,7 @@ const Login = () => {
     };
 
     const submitLogin = (e) => {
-        // sonu sonu
+        // if username is sonu and password is sonu, login successful
 
     };
 
