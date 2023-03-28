@@ -1,38 +1,30 @@
-
-// state - one single object for one component  
-// props 
+// state - one single object for one component
+// props
 
 import { useState } from "react";
 
 const BlogPosts = () => {
 
-    // const authorName = useState();
     const [authorName, setAuthorName] = useState(''); // string - ''
-    const [salary, setSalary] = useState(''); // number - 0
-    const [isIndian, setIsIndian] = useState(false); // boolean - false  
 
-    const blogData = {
-        title: 'Happy Days',
-        body: 'College days are happy days.',
-        author: ''
-    };
-
-    const getAuthorName = () => {
-        console.log(authorName);
-        console.log(blogData.author);
-        blogData.author = authorName;
+    const handleChange = (evt) => {
+        console.log(evt.target.value);
+        // authorName = evt.target.value; // not working
+        setAuthorName(evt.target.value);
     };
 
     return (
         <div>
-            <p>Blogposts data is here...</p>
-            <p> Title: {blogData.title}</p>
-            <p> Body: {blogData.body}</p>
-            <p> Author: {blogData.author}</p>
-            <input type='text' value={authorName} onChange={getAuthorName} />
+            <p>Author : {authorName}</p>
+            <form>
+                <input type='text' value={authorName} onChange={handleChange} />
+            </form>
         </div>
     );
 };
 
 export default BlogPosts;
+
+
+
 
