@@ -48,6 +48,7 @@ const Login = () => {
                 }
             })
             .catch(e => alert(e));
+        isLoggedIn = false;
         e.preventDefault();
     };
 

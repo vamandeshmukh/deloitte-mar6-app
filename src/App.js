@@ -8,6 +8,7 @@
 import Header from "./components/Header";
 import BlogPosts from "./components/BlogPosts";
 import Login from "./components/Login";
+import Parent from "./components/Parent";
 
 const App = () => {
 
@@ -17,8 +18,9 @@ const App = () => {
     <div>
       {/* <Header /> */}
       <h1>Deloitte React App</h1>
-      <Login />
+      {/* <Login /> */}
       {/* <BlogPosts /> */}
+      <Parent />
     </div>
   );
 }
