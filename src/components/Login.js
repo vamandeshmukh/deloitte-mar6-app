@@ -12,50 +12,44 @@ const Login = () => {
         setLoginData({ ...loginData, [e.target.name]: e.target.value });
     };
 
-    const submitLogin = (e) => {
-        e.preventDefault();
-        axios.get(dataUrl)
-            .then((resp) => {
-                console.log(resp.data);
-
-                for (let abc of resp.data) {
-                    if (loginData.username === abc.username) {
-                        isLoggedIn = true;
-                    }
-                }
-                if (isLoggedIn)
-                    alert('Success');
-                else
-                    alert('Not success');
-            })
-            .catch((e) => { console.log(e) });
-    };
-
-
-
-
-
-
     // const submitLogin = (e) => {
+    //     e.preventDefault();
     //     axios.get(dataUrl)
     //         .then((resp) => {
-    //             resp.data.forEach(elem => {
-    //                 if (elem.username === loginData.username) {
+    //             console.log(resp.data);
+    //             for (let abc of resp.data) {
+    //                 if (loginData.username === abc.username) {
     //                     isLoggedIn = true;
     //                 }
-    //             });
-    //             if (isLoggedIn === true) {
-    //                 alert(`${loginData.username} logged in successfully`);
-    //                 setLoginData({ username: '', password: '' });
     //             }
-    //             else {
-    //                 alert('Invalid credentials!');
-    //                 setLoginData({ username: '', password: '' });
-    //             }
+    //             if (isLoggedIn)
+    //                 alert('Success');
+    //             else
+    //                 alert('Not success');
     //         })
-    //         .catch(e => alert(e));
-    //     e.preventDefault();
+    //         .catch((e) => { console.log(e) });
     // };
+
+    const submitLogin = (e) => {
+        axios.get(dataUrl)
+            .then((resp) => {
+                resp.data.forEach(elem => {
+                    if (elem.username === loginData.username) {
+                        isLoggedIn = true;
+                    }
+                });
+                if (isLoggedIn === true) {
+                    alert(`${loginData.username} logged in successfully`);
+                    setLoginData({ username: '', password: '' });
+                }
+                else {
+                    alert('Invalid credentials!');
+                    setLoginData({ username: '', password: '' });
+                }
+            })
+            .catch(e => alert(e));
+        e.preventDefault();
+    };
 
     return (
         <div>
