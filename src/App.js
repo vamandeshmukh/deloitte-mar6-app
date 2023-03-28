@@ -14,10 +14,8 @@ const App = () => {
 
   return ( // view 
     <div>
-      <Header />
+      {/* <Header /> */}
       <h1>Deloitte React App</h1>
-      <p>Welcome to Deloitte ReactJS Application.</p>
-      <p>{salary}</p>
       <BlogPosts />
     </div>
   );
