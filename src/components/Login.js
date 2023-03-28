@@ -24,7 +24,6 @@ const Login = () => {
                     <br />
                     <input type='submit' value='Login' onChange={handleLogin} />
                 </form>
-
             </div>
         </div>
     );
