@@ -1,6 +1,4 @@
 
-
-
 const BlogPosts = () => {
 
     const blogName = 'Some Name';
