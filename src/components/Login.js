@@ -17,7 +17,7 @@ const Login = () => {
             <p>Login Component</p>
             <div>
                 <form onSubmit={submitLogin}>
-                    <input type='text' value='userName' onChange={handleLogin} />
+                    <input type='text' value='username' onChange={handleLogin} />
                     <input type='password' value='password' onChange={handleLogin} />
                     <input type='submit' value='Login' onChange={handleLogin} />
                 </form>
