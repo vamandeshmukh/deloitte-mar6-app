@@ -5,7 +5,7 @@ const BlogPosts = () => {
 
     const blogData = {
         title: 'Happy Days',
-        body: 'Colege days are happy days.',
+        body: 'College days are happy days.',
         author: 'Sonu'
     };
 
