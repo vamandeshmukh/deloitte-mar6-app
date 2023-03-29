@@ -1,5 +1,4 @@
 
-import Header from "./components/Header";
 import AppRoutes from './AppRoutes';
 
 const App = () => {
@@ -7,7 +6,6 @@ const App = () => {
 
   return (
     <div>
-      <Header />
       <AppRoutes />
     </div>
   );

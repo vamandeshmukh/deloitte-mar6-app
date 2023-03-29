@@ -4,14 +4,17 @@ import Parent from './components/Parent';
 import Login from './components/Login';
 import Home from './components/Home';
 import Page404 from './components/Page404';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Header from './components/Header';
 
 const AppRoutes = () => {
 
     return (
         <div>
             <BrowserRouter>
+            <div>
+            <Header />
+            </div>
                 <div>
                     <Routes>
                         <Route path='/blogs' element={<BlogPosts />} />
@@ -25,7 +28,6 @@ const AppRoutes = () => {
             </BrowserRouter>
         </div>
     );
-
 };
 
 export default AppRoutes;
