@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import BlogPosts from "./components/BlogPosts";
 import Login from "./components/Login";
 import Parent from "./components/Parent";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
