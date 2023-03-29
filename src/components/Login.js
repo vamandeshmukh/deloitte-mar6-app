@@ -2,8 +2,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-const dataUrl = 'https://jsonplaceholder.typicode.com/users';
 
+const dataUrl = 'https://jsonplaceholder.typicode.com/users';
 let isLoggedIn = false;
 
 const Login = () => {
