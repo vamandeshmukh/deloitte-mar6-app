@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const dataUrl = 'https://jsonplaceholder.typicode.com/users';
 
 let isLoggedIn = false;
@@ -9,9 +9,10 @@ let isLoggedIn = false;
 const Login = () => {
 
     const [loginData, setLoginData] = useState({ username: '', password: '' });
-    const [showModal, setShowModal] = useState(false);
+    const [loginAlert, setLoginAlert] = useState('');
+    const navigate = useNavigate();
 
-    
+
     const handleLogin = (e) => {
         setLoginData({ ...loginData, [e.target.name]: e.target.value });
     };
@@ -24,13 +25,18 @@ const Login = () => {
                         isLoggedIn = true;
                     }
                 });
-                if (isLoggedIn === true) {
-                    alert(`${loginData.username} logged in successfully`);
+                if (isLoggedIn) {
+                    setLoginAlert(`${loginData.username} logged in successfully, redirecting to home...`);
+                    // alert(`${loginData.username} logged in successfully, redirecting to home...`);
                     setLoginData({ username: '', password: '' });
-
+                    isLoggedIn = false;
+                    setTimeout(() => {
+                        navigate('/home');
+                    }, 2000);
                 }
                 else {
-                    alert('Invalid credentials!');
+                    setLoginAlert('Invalid credentials!');
+                    // alert('Invalid credentials!');
                     setLoginData({ username: '', password: '' });
                     isLoggedIn = false;
                 }
@@ -49,6 +55,7 @@ const Login = () => {
                     <form className="form form-group" onSubmit={submitLogin}>
                         <input className="form-control my-2 py-2" type='text' name='username' placeholder="Please enter username" value={loginData.username} onChange={handleLogin} autoFocus required />
                         <input className="form-control my-2 py-2" type='password' name='password' placeholder="Please enter password" value={loginData.password} onChange={handleLogin} required />
+                        {loginAlert && <p className="lead text-danger"> {loginAlert} </p>}
                         <input className="form-control my-3 py-2" type='submit' value='Login' onChange={handleLogin} />
                     </form>
                 </div>

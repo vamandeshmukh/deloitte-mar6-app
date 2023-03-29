@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const dataUrl = 'https://jsonplaceholder.typicode.com/users/';
 
@@ -8,6 +8,8 @@ const Register = () => {
 
     const [registerData, setRegisterData] = useState({ username: '', password: '', confirmpassword: '' });
     const [canRegister, setCanRegister] = useState(false);
+    const [registerAlert, setRegisterAlert] = useState('');
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         console.log(registerData.username);
@@ -24,7 +26,8 @@ const Register = () => {
                             setCanRegister(true);
                         }
                         else {
-                            alert('User already exists!');
+                            // alert('User already exists!');
+                            setRegisterAlert('User already exists!');
                             setRegisterData({ username: '', password: '', confirmpassword: '' });
                             setCanRegister(false);
                         }
@@ -35,8 +38,12 @@ const Register = () => {
                         axios.post(dataUrl, { username: registerData.username })
                             .then((resp) => {
                                 console.log(resp);
-                                alert(`${resp.data.username} registered successfully`);
+                                // alert(`${resp.data.username} registered successfully`);
+                                setRegisterAlert(`${resp.data.username} registered successfully, redirecting to login...`);
                                 setRegisterData({ username: '', password: '', confirmpassword: '' });
+                                setTimeout(() => {
+                                    navigate('/login');
+                                }, 2000);
                             })
                             .catch(e => alert(e));
                     }
@@ -44,7 +51,8 @@ const Register = () => {
                 .catch(e => alert(e));
         }
         else {
-            alert('Password and conform password mismatch!');
+            // alert('Password and conform password mismatch!');
+            setRegisterAlert('Password and conform password mismatch!');
             setRegisterData({ username: '', password: '', confirmpassword: '' });
             setCanRegister(false);
         }
@@ -78,6 +86,7 @@ const Register = () => {
                             value={registerData.confirmpassword}
                             onChange={handleRegister}
                             required />
+                        {registerAlert && <p className="lead text-danger"> {registerAlert} </p>}
                         <input className="form-control my-3 py-2"
                             type='submit'
                             value='Register'
@@ -85,11 +94,10 @@ const Register = () => {
                         />
                     </form>
                 </div>
+                <div className="col-6 px-2 py-2">
+                    <p>Already registered? <Link to='/login'>Login</Link></p>
+                </div>
             </div>
-            <div className="col-6 px-2 py-2">
-                <p>Already registered? <Link to='/login'>Login</Link></p>
-            </div>
-
         </div>
     );
 
