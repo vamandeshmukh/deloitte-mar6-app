@@ -1,33 +1,53 @@
-// types of cpmponents in React - 
-// function component 
-// class componment 
 
-// jsx 
-
-// function component 
 import Header from "./components/Header";
-import BlogPosts from "./components/BlogPosts";
-import Login from "./components/Login";
-import Parent from "./components/Parent";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
+import AppRoutes from './AppRoutes';
 
 const App = () => {
 
-  const salary = 100; // model / data 
 
-  return ( // view 
+  return (
     <div>
-      {/* <Header /> */}
-      <h1>Deloitte React App</h1>
-      <Login />
-      {/* <BlogPosts /> */}
-      {/* <Parent /> */}
+      <Header />
+      <AppRoutes />
     </div>
   );
 }
 
 export default App;
+
+
+// // types of cpmponents in React - 
+// // function component 
+// // class componment 
+
+// // jsx 
+
+// // function component 
+// import Header from "./components/Header";
+// import BlogPosts from "./components/BlogPosts";
+// import Login from "./components/Login";
+// import Parent from "./components/Parent";
+// // import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+// const App = () => {
+
+//   const salary = 100; // model / data 
+
+//   return ( // view 
+//     <div>
+//       <Header />
+//       <div className="container">
+//       <h1>Deloitte React App</h1>
+//         </div>
+//       <Login />
+//       {/* <BlogPosts /> */}
+//       {/* <Parent /> */}
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // class component
 // import React from "react";
