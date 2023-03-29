@@ -14,7 +14,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // import CSS 
-import './index.css';
+// import './index.css';
 
 // import JS 
 import App from './App';

@@ -9,14 +9,15 @@ import Header from "./components/Header";
 import BlogPosts from "./components/BlogPosts";
 import Login from "./components/Login";
 import Parent from "./components/Parent";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
 
   const salary = 100; // model / data 
 
   return ( // view 
-    <div className="container">
+    <div>
       {/* <Header /> */}
       <h1>Deloitte React App</h1>
       <Login />
