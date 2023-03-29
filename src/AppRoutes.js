@@ -7,15 +7,17 @@ import Page404 from './components/Page404';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
 import Register from './components/Register';
+import Footer from './components/Footer';
+
 
 const AppRoutes = () => {
 
     return (
         <div>
             <BrowserRouter>
-            <div>
-            <Header />
-            </div>
+                <div>
+                    <Header />
+                </div>
                 <div>
                     <Routes>
                         <Route path='/blogs' element={<BlogPosts />} />
@@ -26,6 +28,9 @@ const AppRoutes = () => {
                         <Route exact path='/' element={<Home />} />
                         <Route path='/*' element={<Page404 />} />
                     </Routes>
+                </div>
+                <div>
+                    <Footer />
                 </div>
             </BrowserRouter>
         </div>

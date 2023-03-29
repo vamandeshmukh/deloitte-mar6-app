@@ -1,8 +1,6 @@
-// with bootstrap
 
 import axios from "axios";
 import { useState } from "react";
-import $ from 'jquery';
 const dataUrl = 'https://jsonplaceholder.typicode.com/users';
 let isLoggedIn = false;
 
@@ -24,18 +22,16 @@ const Login = () => {
                     }
                 });
                 if (isLoggedIn === true) {
-                    setShowModal(true);
                     alert(`${loginData.username} logged in successfully`);
-                    // $('#exampleModal').modal('show');
                     setLoginData({ username: '', password: '' });
                 }
                 else {
                     alert('Invalid credentials!');
                     setLoginData({ username: '', password: '' });
+                    isLoggedIn = false;
                 }
             })
             .catch(e => alert(e));
-        isLoggedIn = false;
         e.preventDefault();
     };
 
@@ -47,9 +43,9 @@ const Login = () => {
                 <div className="col-6 shadow px-2 py-2">
                     <p className="lead">Login here to continue</p>
                     <form className="form form-group" onSubmit={submitLogin}>
-                        <input className="form-control my-2 py-2" type='text' name='username' value={loginData.username} onChange={handleLogin} autoFocus required />
-                        <input className="form-control my-2 py-2" type='password' name='password' value={loginData.password} onChange={handleLogin} required />
-                        <input className="form-control my-3 py-2 btn border" type='submit' value='Login' onChange={handleLogin} />
+                        <input className="form-control my-2 py-2" type='text' name='username' placeholder="Please enter username" value={loginData.username} onChange={handleLogin} autoFocus required />
+                        <input className="form-control my-2 py-2" type='password' name='password' placeholder="Please enter password" value={loginData.password} onChange={handleLogin} required />
+                        <input className="form-control my-3 py-2" type='submit' value='Login' onChange={handleLogin} />
                     </form>
                 </div>
             </div>
