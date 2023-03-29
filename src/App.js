@@ -15,7 +15,7 @@ const App = () => {
   const salary = 100; // model / data 
 
   return ( // view 
-    <div>
+    <div className="container">
       {/* <Header /> */}
       <h1>Deloitte React App</h1>
       {/* <Login /> */}

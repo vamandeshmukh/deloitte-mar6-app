@@ -13,7 +13,7 @@ const Parent = () => {
 
     return (
         <div>
-            <p>Parent -</p>
+            <p className="display-2" >Parent -</p>
             <p>Parent data in parent: {parentDataInParent}</p>
             <p>Child data in parent: {childDataInParent}</p>
             <Child passData={parentDataInParent} passFun={getDataFromChild} />
@@ -22,4 +22,7 @@ const Parent = () => {
 };
 
 export default Parent;
+
+
+
 
