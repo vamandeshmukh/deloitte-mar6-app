@@ -42,7 +42,7 @@ const Login = () => {
     return (
         <div>
             <div className="container py-3 my-3">
-                <p className="display-2 text-primary py-2">Login</p>
+                <p className="display-4 text-primary py-2">Login</p>
                 <hr />
                 <div className="col-6 shadow px-2 py-2">
                     <p className="lead">Login here to continue</p>

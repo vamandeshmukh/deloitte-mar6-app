@@ -13,11 +13,17 @@ const Parent = () => {
 
     return (
         <div>
-            <p className="display-2 text-primary" >Parent -</p>
-            <p>Parent data in parent: {parentDataInParent}</p>
-            <p>Child data in parent: {childDataInParent}</p>
-            <Child passData={parentDataInParent} passFun={getDataFromChild} />
+            <div className="container py-3 my-3">
+                <p className="display-4 text-primary py-2">Parent</p>
+                <hr />
+                <div className="px-2 py-2">
+                    <p>Parent data in parent: {parentDataInParent}</p>
+                    <p>Child data in parent: {childDataInParent}</p>
+                    <Child passData={parentDataInParent} passFun={getDataFromChild} />
+                </div>
+            </div>
         </div>
+
     );
 };
 

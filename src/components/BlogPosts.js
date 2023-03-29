@@ -21,14 +21,23 @@ const BlogPosts = () => {
     };
 
     return (
+
         <div>
-            <p>Author : {authorName}</p>
-            <p>Author : {authorNameSubmitted}</p>
-            <form onSubmit={handleSubmit} >
-                <input type='text' value={authorName} onChange={handleChange} />
-                <input type='submit' value='Click to Submit' />
-            </form>
+            <div className="container py-3 my-3">
+                <p className="display-4 text-primary py-2">Blogs</p>
+                <hr />
+                <div className="px-2 py-2">
+                    <p>Author : {authorName}</p>
+                    <p>Author : {authorNameSubmitted}</p>
+                    <form onSubmit={handleSubmit} >
+                        <input type='text' value={authorName} onChange={handleChange} />
+                        <input type='submit' value='Click to Submit' />
+                    </form>
+                </div>
+            </div>
         </div>
+
+
     );
 };
 

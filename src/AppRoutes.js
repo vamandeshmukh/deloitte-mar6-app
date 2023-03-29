@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Page404 from './components/Page404';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
+import Register from './components/Register';
 
 const AppRoutes = () => {
 
@@ -21,6 +22,7 @@ const AppRoutes = () => {
                         <Route path='/home' element={<Home />} />
                         <Route path='/login' element={<Login />} />
                         <Route path='/parent' element={<Parent />} />
+                        <Route path='/register' element={<Register />} />
                         <Route exact path='/' element={<Home />} />
                         <Route path='/*' element={<Page404 />} />
                     </Routes>

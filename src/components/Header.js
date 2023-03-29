@@ -9,6 +9,7 @@
 //             <Link to='/blogs'>Blogs </Link>
 //             <Link to='/parent'>Parent </Link>
 //             <Link to='/login'>Login</Link>
+//             <Link to='/register'>register</Link>
 //         </div>
 
 //     );
@@ -47,9 +48,12 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to='/login'>Login</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to='/Register'>Register</Link>
+                            </li>
                         </ul>
                         <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" />
+                            <input className="form-control me-2" type="search" placeholder="Search a blog..." />
                             <button className="btn btn-outline-primary" type="submit">Search</button>
                         </form>
                     </div>
