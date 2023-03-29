@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const dataUrl = 'https://jsonplaceholder.typicode.com/users/';
 
@@ -85,6 +86,10 @@ const Register = () => {
                     </form>
                 </div>
             </div>
+            <div className="col-6 px-2 py-2">
+                <p>Already registered? <Link to='/login'>Login</Link></p>
+            </div>
+
         </div>
     );
 

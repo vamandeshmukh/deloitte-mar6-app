@@ -1,7 +1,9 @@
 
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const dataUrl = 'https://jsonplaceholder.typicode.com/users';
+
 let isLoggedIn = false;
 
 const Login = () => {
@@ -9,6 +11,7 @@ const Login = () => {
     const [loginData, setLoginData] = useState({ username: '', password: '' });
     const [showModal, setShowModal] = useState(false);
 
+    
     const handleLogin = (e) => {
         setLoginData({ ...loginData, [e.target.name]: e.target.value });
     };
@@ -24,6 +27,7 @@ const Login = () => {
                 if (isLoggedIn === true) {
                     alert(`${loginData.username} logged in successfully`);
                     setLoginData({ username: '', password: '' });
+
                 }
                 else {
                     alert('Invalid credentials!');
@@ -48,33 +52,10 @@ const Login = () => {
                         <input className="form-control my-3 py-2" type='submit' value='Login' onChange={handleLogin} />
                     </form>
                 </div>
+                <div className="col-6 px-2 py-2">
+                    <p>Not yet registered? <Link to='/register'>Register</Link></p>
+                </div>
             </div>
-            <div>
-                {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button> */}
-                {showModal &&
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Login successfull!
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Okay</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-
-            </div>
-
         </div>
     );
 
