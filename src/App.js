@@ -19,9 +19,9 @@ const App = () => {
     <div className="container">
       {/* <Header /> */}
       <h1>Deloitte React App</h1>
-      {/* <Login /> */}
+      <Login />
       {/* <BlogPosts /> */}
-      <Parent />
+      {/* <Parent /> */}
     </div>
   );
 }
