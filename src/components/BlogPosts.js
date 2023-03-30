@@ -12,7 +12,7 @@ const BlogPosts = () => {
         axios.get(blogUrl)
 
             .then((resp) => {
-                console.log(resp);
+                console.log(resp.data);
                 setAllBlogs(resp.data);
             })
             .catch(e => console.log(e));
@@ -29,7 +29,11 @@ const BlogPosts = () => {
                 <div className="px-2 py-2">
                     <p>Number of blogposts: {allBlogs.length}</p>
                     <div>
-                        <p>{allBlogs[0].title}</p>
+
+                        {allBlogs.map((blog, i) => {
+                            return <div obj={blog} key={i}>{blog.title}</div>;
+                        })}
+
                     </div>
 
                 </div>
