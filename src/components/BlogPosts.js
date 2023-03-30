@@ -36,8 +36,8 @@ const BlogPosts = () => {
                         })} */}
 
                         {allBlogs.map((blog, i) => {
-                            return <div obj={blog} key={i}> <Link to='/blog'>{blog.title}</Link></div>;
-                            // return <div obj={blog} key={i}> <Link to={{ pathname: `/blog/${blog.id}` }} >{blog.title}</Link></div>;
+                            // return <div obj={blog} key={i}> <Link to='/blog'>{blog.title}</Link></div>;
+                            return <div obj={blog} key={i}> <Link to={{ pathname: `/blog/${blog.id}` }} >{blog.title}</Link></div>;
 
                         })}
 
