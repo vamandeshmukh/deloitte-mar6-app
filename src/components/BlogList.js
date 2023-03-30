@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 
 const blogUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-const BlogPosts = () => {
+const BlogList = () => {
 
     const [allBlogs, setAllBlogs] = useState([]);
 
     useEffect(() => {
-
         axios.get(blogUrl)
             .then((resp) => {
                 console.log(resp.data);
@@ -23,34 +22,41 @@ const BlogPosts = () => {
     return (
 
         <div>
-            <div className="container py-3 my-3">
-                <p className="display-4 text-primary py-2">Blogs</p>
-                <hr />
-                <div className="px-2 py-2">
-                    <p>Number of blogposts: {allBlogs.length}</p>
-                    <div>
+            <div className="row mb-3 pb-3">
 
-                        {/* {allBlogs.map((blog, i) => {
-                            return <div obj={blog} key={i}>{blog.title}</div>;
-                        })} */}
-
-                        {allBlogs.map((blog, i) => {
-                            // return <div obj={blog} key={i}> <Link to='/blog'>{blog.title}</Link></div>;
-                            return <div obj={blog} key={i}> <Link to={{ pathname: `/blog/${blog.id}` }} >{blog.title}</Link></div>;
-
-                        })}
-
-                    </div>
-
+                <div className="col-2">
+                    {/* left-side bar content here  */}
                 </div>
-            </div>
+
+                <div className="col-8">
+                    <div className="pt-3 mt-3">
+                        <p className="display-4 text-primary py-2">Blogs</p>
+                        <hr />
+                        <div className="px-2 py-2">
+                            <div>
+                                {allBlogs.map((blog, i) => {
+                                    return <div obj={blog} key={i}>
+                                        <Link to={{ pathname: `/blog/${blog.id}` }} >
+                                            {blog.title}
+                                        </Link>
+                                    </div>;
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-2">
+                    {/* right-side bar content here  */}
+                </div>
+            </div >
         </div>
 
 
     );
 };
 
-export default BlogPosts;
+export default BlogList;
 
 
 

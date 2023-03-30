@@ -1,5 +1,5 @@
 
-import BlogPosts from './components/BlogPosts';
+import BlogList from './components/BlogList';
 import Parent from './components/Parent';
 import Login from './components/Login';
 import Home from './components/Home';
@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
 import Register from './components/Register';
 import Footer from './components/Footer';
-import OneBlog from './components/OneBlog';
+import BlogDetails from './components/BlogDetails';
 
 
 const AppRoutes = () => {
@@ -21,8 +21,8 @@ const AppRoutes = () => {
                 </div>
                 <div>
                     <Routes>
-                        <Route path='/blogs' element={<BlogPosts />} />
-                        <Route path='/blog/:id' element={<OneBlog />} />
+                        <Route path='/bloglist' element={<BlogList />} />
+                        <Route path='/blog/:id' element={<BlogDetails />} />
                         {/* <Route path='/blog' element={<OneBlog />} /> */}
                         <Route path='/home' element={<Home />} />
                         <Route path='/login' element={<Login />} />

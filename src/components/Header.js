@@ -6,7 +6,7 @@
 //     return (
 //         <div>
 //             <Link to='/home'>Home </Link>
-//             <Link to='/blogs'>Blogs </Link>
+//             <Link to='/bloglist'>Bloglist </Link>
 //             <Link to='/parent'>Parent </Link>
 //             <Link to='/login'>Login</Link>
 //             <Link to='/register'>register</Link>
@@ -40,7 +40,7 @@ const Header = () => {
                                 <Link className="nav-link" to='/home'>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to='/blogs'>Blogs</Link>
+                                <Link className="nav-link" to='/bloglist'>Bloglist</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to='/parent'>Parent</Link>
