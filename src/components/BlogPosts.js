@@ -11,7 +11,6 @@ const BlogPosts = () => {
     useEffect(() => {
 
         axios.get(blogUrl)
-
             .then((resp) => {
                 console.log(resp.data);
                 setAllBlogs(resp.data);
