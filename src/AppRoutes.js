@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header';
 import Register from './components/Register';
 import Footer from './components/Footer';
+import OneBlog from './components/OneBlog';
 
 
 const AppRoutes = () => {
@@ -21,6 +22,8 @@ const AppRoutes = () => {
                 <div>
                     <Routes>
                         <Route path='/blogs' element={<BlogPosts />} />
+                        {/* <Route path='/blog/:id' element={<OneBlog />} /> */}
+                        <Route path='/blog' element={<OneBlog />} />
                         <Route path='/home' element={<Home />} />
                         <Route path='/login' element={<Login />} />
                         <Route path='/parent' element={<Parent />} />

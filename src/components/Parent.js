@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Child from "./Child";
 
+let isYes = '';
+
 const Parent = () => {
 
     const parentDataInParent = 'Sonu';
@@ -9,6 +11,12 @@ const Parent = () => {
     const getDataFromChild = (arg) => {
         console.log('getDataFromChild');
         setChildDataInParent(arg);
+    };
+
+    const yesOrNo = (e) => {
+        // e.preventDefault();
+        console.log('called');
+        isYes = 'Visible';
     };
 
     return (
@@ -21,6 +29,13 @@ const Parent = () => {
                     <p>Child data in parent: {childDataInParent}</p>
                     <Child passData={parentDataInParent} passFun={getDataFromChild} />
                 </div>
+                {/* conditional example  */}
+                {/* <div>
+                    <button onClick={yesOrNo}>Click</button>
+                    {isYes && <p>{isYes}</p>}
+                    <p>No</p>
+                </div> */}
+
             </div>
         </div>
 
