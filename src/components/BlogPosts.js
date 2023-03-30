@@ -8,7 +8,9 @@ const BlogPosts = () => {
     const [allBlogs, setAllBlogs] = useState([]);
 
     useEffect(() => {
+
         axios.get(blogUrl)
+
             .then((resp) => {
                 console.log(resp);
                 setAllBlogs(resp.data);
@@ -26,6 +28,9 @@ const BlogPosts = () => {
                 <hr />
                 <div className="px-2 py-2">
                     <p>Number of blogposts: {allBlogs.length}</p>
+                    <div>
+                        <p>{allBlogs[0].title}</p>
+                    </div>
 
                 </div>
             </div>
