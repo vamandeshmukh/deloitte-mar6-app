@@ -22,8 +22,8 @@ const AppRoutes = () => {
                 <div>
                     <Routes>
                         <Route path='/blogs' element={<BlogPosts />} />
-                        {/* <Route path='/blog/:id' element={<OneBlog />} /> */}
-                        <Route path='/blog' element={<OneBlog />} />
+                        <Route path='/blog/:id' element={<OneBlog />} />
+                        {/* <Route path='/blog' element={<OneBlog />} /> */}
                         <Route path='/home' element={<Home />} />
                         <Route path='/login' element={<Login />} />
                         <Route path='/parent' element={<Parent />} />
