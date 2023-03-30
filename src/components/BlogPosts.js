@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const blogUrl = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -30,8 +31,12 @@ const BlogPosts = () => {
                     <p>Number of blogposts: {allBlogs.length}</p>
                     <div>
 
-                        {allBlogs.map((blog, i) => {
+                        {/* {allBlogs.map((blog, i) => {
                             return <div obj={blog} key={i}>{blog.title}</div>;
+                        })} */}
+
+                        {allBlogs.map((blog, i) => {
+                            return <div obj={blog} key={i}> <Link to='/blog'>{blog.title}</Link></div>;
                         })}
 
                     </div>
