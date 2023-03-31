@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import Child from "./Child";
 
 let isYes = '';
@@ -7,6 +8,10 @@ const Parent = () => {
 
     const parentDataInParent = 'Sonu';
     const [childDataInParent, setChildDataInParent] = useState('');
+    const writerInfo = useSelector((state) => state.writer.writerDetailsInStore);
+
+    console.log(writerInfo.username);
+    console.log(writerInfo.email);
 
     const getDataFromChild = (arg) => {
         console.log('getDataFromChild');

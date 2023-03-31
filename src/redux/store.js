@@ -1,9 +1,9 @@
 
 // steps to use redux in react app 
-// 1. create store 
-// 2. provide store to react app (in index.js)
-// 3. create slices for compoments 
-// 4. invoke slices into components 
+// 1. create store  - only once 
+// 2. provide store to react app (in index.js) - only once 
+// 3. create slices for compoments - for each component
+// 4. invoke slices into components - for each component
 
 // useful links :
 // https://redux.js.org/introduction/getting-started
