@@ -6,6 +6,7 @@ const App = () => {
 
   return (
     <div>
+      <p>learn react</p>
       <AppRoutes />
     </div>
   );

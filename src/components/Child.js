@@ -9,6 +9,8 @@ const Child = (props) => {
         props.passFun(childDataInChild);
     };
 
+    const addNums = (a, b) => { return a + b; };
+
 
     return (
         <div>
