@@ -14,8 +14,7 @@ const Writer = (props) => {
                 setWriterDetails(resp.data);
             })
             .catch(e => console.log(e));
-    },
-        []);
+    });
 
     return (
         <div>
