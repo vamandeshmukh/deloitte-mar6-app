@@ -3,7 +3,6 @@ import AppRoutes from './AppRoutes';
 
 const App = () => {
 
-
   return (
     <div>
       <p>learn react</p>
