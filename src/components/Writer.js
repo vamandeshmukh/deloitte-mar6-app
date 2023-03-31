@@ -17,7 +17,6 @@ const Writer = (props) => {
     },
         []);
 
-
     return (
         <div>
             <p>Posted by: {writerDetails.name}</p>
