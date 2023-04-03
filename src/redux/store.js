@@ -17,6 +17,8 @@ import writerReducer from './WriterSlice';
 export default configureStore({
     reducer: {
         writer: writerReducer
+        // ,
+        // other ones 
     },
 });
 
