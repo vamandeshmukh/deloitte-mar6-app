@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import updateWriterDetailsInStore from "../redux/WriterSlice";
+import updateWriterDetailsInStore from "../redux/WriterSlice";
 import { useSelector, useDispatch } from 'react-redux'
 
 const blogUrl = 'https://jsonplaceholder.typicode.com/users/';
@@ -12,18 +12,16 @@ const Writer = (props) => {
 
     const writerInfo = useSelector((state) => state.writer.writerDetailsInStore);
     const dispatch = useDispatch();
-
-    console.log(writerInfo.username);
-    console.log(writerInfo.email);
-
     useEffect(() => {
-        // dispatch(updateWriterDetailsInStore({ username: 'Monu', email: 'monu@gmail.com' }));
-        axios.get(blogUrl + props.writerId)
+        console.log(props.writerId);
+        axios.get(blogUrl + 2)
             .then((resp) => {
+                console.log(resp.data);
+                dispatch(updateWriterDetailsInStore(resp.data));
                 setWriterDetails(resp.data);
             })
             .catch(e => console.log(e));
-    }, []);
+    });
 
     return (
         <div>

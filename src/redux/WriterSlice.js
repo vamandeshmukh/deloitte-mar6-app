@@ -11,6 +11,7 @@ const WriterSlice = createSlice({
 
     reducer: {
         updateWriterDetailsInStore: (state, action) => {
+            console.log(action.payload);
             state.writerDetailsInStore = action.payload;
         }
     }
